@@ -67,6 +67,7 @@ my $dir = getcwd();
 print "Download finished. File saved to $dir/$real_file\n";
 
 # Symlink that file
+-e $server_file and unlink $server_file;
 symlink $real_file, $server_file;
 print "Symlinked $mc_version as $server_file\n";
 
